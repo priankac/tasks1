@@ -198,7 +198,21 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((ask) => {
+        if (ask.id !== targetId) {
+            return ask;
+        }
+        const updated =
+            targetOptionIndex === -1 ?
+                [...ask.options, newOption]
+            :   ask.options.map((option, index) =>
+                    index === targetOptionIndex ? newOption : option,
+                );
+        return {
+            ...ask,
+            options: updated,
+        };
+    });
 }
 
 /***
