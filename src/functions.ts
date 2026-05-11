@@ -1,0 +1,61 @@
+/**
+ * Consumes a single temperature in Fahrenheit (a number) and converts to Celsius
+ * using this formula:
+ *      C = (F - 32) * 5/9
+ */
+export function fahrenheitToCelius(temperature: number): number {
+    const celsius_temp = ((temperature - 32) * 5) / 9;
+    return celsius_temp;
+}
+
+/**
+ * Consumes three numbers and produces their sum. BUT you should only add a number
+ * if the number is greater than zero.
+ */
+export function add3(first: number, second: number, third: number): number {
+    let addition_num = 0;
+    if (first > 0) {
+        addition_num = addition_num + first;
+    }
+    if (second > 0) {
+        addition_num = addition_num + second;
+    }
+    if (third > 0) {
+        addition_num = addition_num + third;
+    }
+    return addition_num;
+}
+
+/**
+ * Consumes a string and produces the same string in UPPERCASE and with an exclamation
+ * mark added to the end.
+ */
+export function shout(message: string): string {
+    const loud = message.toUpperCase();
+    return loud + "!";
+}
+
+/**
+ * Consumes a string (a message) and returns a boolean if the string ends in a question
+ * mark. Do not use an `if` statement in solving this question.
+ */
+export function isQuestion(message: string): boolean {
+    const char_end = message.charAt(message.length - 1);
+    return char_end === "?";
+}
+
+/**
+ * Consumes a word (a string) and returns either `true`, `false`, or `null`. If the string
+ * is "yes" (upper or lower case), then return `true`. If the string is "no" (again, either
+ * upper or lower case), then return `false`. Otherwise, return `null`.
+ */
+export function convertYesNo(word: string): boolean | null {
+    const lower_type = word.toLowerCase();
+    if (lower_type === "yes") {
+        return true;
+    }
+    if (lower_type === "no") {
+        return false;
+    }
+    return null;
+}
