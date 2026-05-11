@@ -3,6 +3,12 @@ import { Button, Container, Row, Col } from "react-bootstrap";
 import animal from "./animals/shutterstock_2068599128-1.jpg.avif";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): React.JSX.Element {
     return (
