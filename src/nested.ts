@@ -150,7 +150,9 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    return questions.map((ask) =>
+        ask.id === targetId ? { ...ask, name: newName } : ask,
+    );
 }
 
 /***
