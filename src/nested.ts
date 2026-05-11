@@ -226,5 +226,7 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number,
 ): Question[] {
-    return [];
+    return questions.flatMap((ask) =>
+        ask.id === targetId ? [ask, duplicateQuestion(newId, ask)] : [ask],
+    );
 }
