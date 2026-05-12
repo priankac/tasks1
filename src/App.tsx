@@ -11,6 +11,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
     return (
@@ -29,6 +34,27 @@ function App(): React.JSX.Element {
             <ChangeType />
             <hr />
             <CycleHoliday />
+            <hr />
+            <DoubleHalf />
+            <hr />
+            <ColoredBox />
+            <hr />
+            <ShoveBox />
+            <hr />
+            <ChooseTeam />
+            <hr />
+            <CheckAnswer expectedAnswer="42" />
+            <hr />
+            <GiveAttempts />
+            <hr />
+            <EditMode />
+            <hr />
+            <ChangeColor />
+            <hr />
+            <MultipleChoiceQuestion
+                expectedAnswer="2"
+                options={["1", "2", "3"]}
+            />
         </div>
     );
 }
