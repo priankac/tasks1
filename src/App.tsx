@@ -34,6 +34,27 @@ function App(): React.JSX.Element {
             <ChangeType />
             <hr />
             <CycleHoliday />
+            <hr />
+            <DoubleHalf />
+            <hr />
+            <ColoredBox />
+            <hr />
+            <ShoveBox />
+            <hr />
+            <ChooseTeam />
+            <hr />
+            <CheckAnswer expectedAnswer="42" />
+            <hr />
+            <GiveAttempts />
+            <hr />
+            <EditMode />
+            <hr />
+            <ChangeColor />
+            <hr />
+            <MultipleChoiceQuestion
+                expectedAnswer="2"
+                options={["1", "2", "3"]}
+            />
         </div>
     );
 }
